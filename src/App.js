@@ -1,33 +1,33 @@
-import React, { Component } from "react";
-import "./stylesheet.css";
+import React, { useState } from "react";
 
-class Header extends Component {
-  render() {
-    return (
-      <header>
-        <div id="hero"></div>
+const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-        <div className="menu-container">
-          <a href="#" className="menu-item">
-            Home
-          </a>
-          <a href="#" className="menu-item">
-            Explore
-          </a>
-          <div className="menu-text"></div>
-          <a href="CreateAccount.html" className="menu-item">
-            Start a campaign
-          </a>
-          <a href="#" className="menu-item">
-            How it works
-          </a>
-          <a href="startACampaign.html" className="menu-item start-campaign">
-            Start a campaign
-          </a>
-        </div>
-      </header>
-    );
-  }
-}
+  return (
+    <nav className="menu">
+      <button onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? "Close" : "Open"} Menu
+      </button>
+      {isOpen && (
+        <ul>
+          <li>
+            <NavLink to="/" exact>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/discover">Discover</NavLink>
+          </li>
+          <li>
+            <NavLink to="/create">Create</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+        </ul>
+      )}
+    </nav>
+  );
+};
 
-export default Header;
+export default Menu;

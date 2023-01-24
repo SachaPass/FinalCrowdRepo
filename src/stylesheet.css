@@ -6,10 +6,8 @@ body {
 }
 
 .menu-container {
-  animation: back 0.2s;
-
   transition: ease-in-out;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -65,16 +63,13 @@ body {
     margin-top: 50px;
   }
   100% {
-    width: 100%;
+    width: 4000px;
     margin-top: 0px;
   }
 }
-/* Styling for the menu items */
+
 .menu-container.scrolled {
   animation: lengthIncrease 0.2s;
-
-  transition-duration: 1000ms;
-  transition: ease-in-out;
 
   position: fixed;
   top: 0;
@@ -142,7 +137,7 @@ body {
 }
 
 div#hero {
-  background-image: url("./Pictures/beach-1110347.jpg");
+  background-image: url("./beach-1110347.jpg");
   background-size: cover;
 
   height: 700px;
@@ -153,104 +148,14 @@ div#hero {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: absolute;
+  position: fixed;
 
   object-fit: contain;
   width: 100vw;
 }
 
-@media (min-height: 768px) {
-  div#hero {
-    height: 90vh;
-  }
-}
 .menu-item.start-campaign {
   border: 2px solid green;
   border-radius: 3.625rem;
   color: green;
 }
-
-/* section#hero button {
-    background-color: #F9A51A;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  section#hero button:hover {
-    background-color: white;
-    color: #F9A51A;
-  }
-  
-  section#featured-projects {
-    background-color: #F9F9F9;
-    padding: 20px;
-    display: flex;
-  }
-
-  section#featured-projects {
-    background-color: #F9F9F9;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  section#featured-projects h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  section#featured-projects .project {
-    width: calc(33.33% - 40px);
-    margin: 20px;
-    background-color: white;
-    box-shadow: 2px 2px 2px #CCC;
-    overflow: hidden;
-  }
-  
-  section#featured-projects .project img {
-    width: 100%;
-  }
-  
-  section#featured-projects .project h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px;
-  }
-  
-  section#featured-projects .project p {
-    font-size: 14px;
-    margin: 10px;
-    text-align: justify;
-  }
-  
-  section#featured-projects .project button {
-    background-color: #F9A51A;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
-    margin: 10px;
-  }
-  
-  section#featured-projects .project button:hover {
-    background-color: white;
-    color: #F9A51A;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-   */
